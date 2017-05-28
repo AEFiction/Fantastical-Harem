@@ -1,10 +1,10 @@
-<tw-storydata name="Fantastical-Harem" startnode="1" creator="Twine" creator-version="2.1.3" ifid="F182644B-68C8-49C8-860F-C45B871E3FEF" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="Welcome" tags="blahblahblah" position="128,116">This game contains many themes that may be considered offensive. Further, due to the sexual nature of the game you must be of legal age to play this type of game.
-[[Agree, and play the game-&gt;start-config0]]
-It is created using &lt;a href=&quot;https://twinery.org/&quot;&gt;Twine&lt;/a&gt; and released under the [[License&lt;-GPL V3]].
-The content is copyrighted per the [[Contributors&lt;-credits]]
-(set: $quotes to (text-style: &quot;condense&quot;))</tw-passagedata><tw-passagedata pid="2" name="License" tags="blahblahblah" position="0,2">                    GNU GENERAL PUBLIC LICENSE
+<tw-storydata name="Fantastical-Harem" startnode="1" creator="Twine" creator-version="2.1.3" ifid="F182644B-68C8-49C8-860F-C45B871E3FEF" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">config.history.controls = false;</script><tw-passagedata pid="1" name="Main Screen" tags="blahblahblah" position="128,116">This game contains many themes that may be considered offensive. Further, due to the sexual nature of the game you must be of legal age to play this type of game.
+[[Agree, and play the game|start-config0]]
+It is created using &lt;a href=&quot;https://twinery.org/&quot;&gt;Twine&lt;/a&gt; and released under the [[GPL V3|license]].
+The content is copyrighted per the [[credits|Contributors]]</tw-passagedata><tw-passagedata pid="2" name="license" tags="blahblahblah" position="0,2">                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
@@ -678,33 +678,175 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 &lt;http://www.gnu.org/philosophy/why-not-lgpl.html&gt;.
-</tw-passagedata><tw-passagedata pid="3" name="Contributors" tags="blahblahblah" position="0,103">Original Author and Founder: AEFictionDev</tw-passagedata><tw-passagedata pid="4" name="start-config0" tags="config" position="172,0">The first thing you notice is the headache. It is quite possibly the worst pain you have ever been in. You try to remember what happened. You remember being in a fight of some sort. What type of fight was it?(set:$playerCharacter to (dm:))(set:$playerCharacter&#x27;s name to &quot;Player&quot;)(set:$playerCharacter&#x27;s sex to 0)(set:$playerCharacter&#x27;s race to 0)(set:$playerCharacter&#x27;s skin to &quot;white&quot;)(set:$playerCharacter&#x27;s eyes to &quot;brown&quot;)(set:$playerCharacter&#x27;s hairColor to &quot;brown&quot;)(set:$playerCharacter&#x27;s hairLength to &quot;chin-length&quot;)(set:$playerCharacter&#x27;s hairType to &quot;straight&quot;)(set:$playerCharacter&#x27;s height to &quot;average&quot;)(set:$playerCharacter&#x27;s breasts to &quot;no&quot;)(set:$playerCharacter&#x27;s butt to &quot;flat&quot;)(set:$playerCharacter&#x27;s pubes to &quot;natural&quot;)(set:$playerCharacter&#x27;s tail to &quot;no&quot;)
-(link: &quot;A magical duel with another student.&quot;)[(set: $playerCharacter&#x27;s background to 0)(goto: &quot;start-config1&quot;)]
-(link: &quot;A bar brawl while out on patrol.&quot;)[(set: $playerCharacter&#x27;s background to 1)(goto: &quot;start-config1&quot;)]
-(link: &quot;Well, &#x27;fight&#x27; may not be the right word, there was lots of screaming though.&quot;)[(set: $playerCharacter&#x27;s background to 2)(goto: &quot;start-config1&quot;)]</tw-passagedata><tw-passagedata pid="5" name="start-config1" tags="config" position="292,8">You open your eyes and look around you. (if:$playerCharacter&#x27;s background is 0)[&quot;You&#x27;re laying on a cot in the College&#x27;s infirmary.&quot;](if:$playerCharacter&#x27;s background is 1)[&quot;You&#x27;re laying on your bed in the barracks.&quot;](if:$playerCharacter&#x27;s background is 2)[&quot;You&#x27;re laying in a stranger&#x27;s bed.&quot;]
+</tw-passagedata><tw-passagedata pid="3" name="Contributors" tags="blahblahblah" position="0,103">Original Author and Founder: AEFictionDev</tw-passagedata><tw-passagedata pid="4" name="start-config0" tags="config" position="172,0">The first thing you notice is the headache. It is quite possibly the worst pain you have ever been in. You try to remember what happened. You remember being in a fight of some sort. What type of fight was it?&lt;&lt;set $playerCharacter = new Object()&gt;&gt;&lt;&lt;set $playerCharacter.Name = &quot;Player&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Sex = 0&gt;&gt;&lt;&lt;set $playerCharacter.Race = 0&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 0&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 0&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 0&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 0&gt;&gt;&lt;&lt;set $playerCharacter.HairType = 0&gt;&gt;&lt;&lt;set $playerCharacter.Height = 0&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 0&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 0&gt;&gt;&lt;&lt;set $playerCharacter.Pubes = 0&gt;&gt;&lt;&lt;set $playerCharacter.Tail to 0&gt;&gt;
+[[A magical duel with another student.|start-config1][$playerCharacter.Background to 0]]
+[[A bar brawl while out on patrol.|start-config1][$playerCharacter.Background to 1]]
+[[Well, &#x27;fight&#x27; may not be the right word, there was lots of screaming though.|start-config1][$playerCharacter.Background to 2]]</tw-passagedata><tw-passagedata pid="5" name="start-config1" tags="config" position="292,8">You open your eyes and look around you.
+&lt;&lt;switch $playerCharacter.Background&gt;&gt;
+&lt;&lt;case 0&gt;&gt;You&#x27;re laying on a cot in the College&#x27;s infirmary.
+&lt;&lt;case 1&gt;&gt;You&#x27;re laying on your bed in the barracks.
+&lt;&lt;case 2&gt;&gt;You&#x27;re laying in a stranger&#x27;s bed.
+&lt;&lt;/switch&gt;&gt;
 Let&#x27;s see how much damage was done to your head.
-You are called {(live: 500)[(link: $playerCharacter&#x27;s name)[(set: $playerCharacter&#x27;s name to (prompt: &quot;What are you called?&quot;, &quot;&quot;))]]}.
-You have {(live: 200)[(if:$playerCharacter&#x27;s sex is 0)[(print: &quot;a penis&quot;)](else-if:$playerCharacter&#x27;s sex is 1)[(print: &quot;a vagina&quot;)](else-if:$playerCharacter&#x27;s sex is 2)[(print: &quot;both a penis and a vagina&quot;)]]}. (link-repeat: &quot;Penis&quot;)[(set: $playerCharacter&#x27;s sex to 0)] (link-repeat: &quot;Vagina&quot;)[(set: $playerCharacter&#x27;s sex to 1)] (link-repeat: &quot;Both&quot;)[(set: $playerCharacter&#x27;s sex to 2)]
-(link: &quot;Try to sit up.&quot;)[(goto: &quot;start-config2&quot;)]</tw-passagedata><tw-passagedata pid="6" name="start-config2" tags="config" position="403,4">You try to sit up, only for the headache to somehow worsen. (if: $playerCharacter&#x27;s background is 0)[The College nurse comes over. $quotes[&quot;You really strained yourself in that battle. Take it easy for a while.&quot;] After recuperating you get up and head to your dorm room to prepare for the upcoming graduation.](else-if: $playerCharacter&#x27;s background is 1)[A fellow guard brings over a bucket for you to vomit in. $quotes[&quot;Good job last night, we managed to round up all the trouble makers after that one knocked you out.&quot;] After you vomit out what was still in your stomach you stand up and get ready for the retirement ceremony, you&#x27;ve done your time and earned your pension.](else-if: $playerCharacter&#x27;s background is 2)[You find a note, seems your partner last night only wanted the one night too. They kindly left you some water to help with the dehydration. After you feel better you get dressed and go home, preparing for your next conquest.]
+You are called &lt;&lt;textbox &quot;$playerCharacter.Name&quot; $playerCharacter.Name&gt;&gt;.
+You have &lt;span class=&quot;pcSex&quot;&gt;&lt;&lt;pcSex&gt;&gt;&lt;/span&gt;.
+&lt;&lt;link &quot;Penis&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Sex = 0&gt;&gt;&lt;&lt;replace &quot;.pcSex&quot;&gt;&gt;&lt;&lt;pcSex&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Vagina&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Sex = 1&gt;&gt;&lt;&lt;replace &quot;.pcSex&quot;&gt;&gt;&lt;&lt;pcSex&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Both&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Sex = 2&gt;&gt;&lt;&lt;replace &quot;.pcSex&quot;&gt;&gt;&lt;&lt;pcSex&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Try to sit up.|start-config2]]</tw-passagedata><tw-passagedata pid="6" name="start-config2" tags="config" position="403,4">You try to sit up, only for the headache to somehow worsen.
+&lt;&lt;switch $playerCharacter.Background&gt;&gt;
+&lt;&lt;case 0&gt;&gt;The College nurse comes over. &quot;You really strained yourself in that battle. Take it easy for a while.&quot; After recuperating you get up and head to your dorm room to prepare for the upcoming graduation.
+&lt;&lt;case 1&gt;&gt;A fellow guard brings over a bucket for you to vomit in. &quot;Good job last night, we managed to round up all the trouble makers after that one knocked you out.&quot; After you vomit out what was still in your stomach you stand up and get ready for the retirement ceremony, you&#x27;ve done your time and earned your pension.
+&lt;&lt;case 2&gt;&gt;You find a note, seems your partner last night only wanted the one night too. They kindly left you some water to help with the dehydration. After you feel better you get dressed and go home, preparing for your next conquest.
+&lt;&lt;/switch&gt;&gt;
 What do you see in your mirror?
 (Race options coming soon)
-(link: &quot;A human&quot;)[(set:$playerCharacter&#x27;s race to 0)(goto: &quot;start-config-human&quot;)]</tw-passagedata><tw-passagedata pid="7" name="start-config-human" tags="config" position="507,2">Looking in more detail how do you appear?
-You have {(live:200)[(print:$playerCharacter&#x27;s skin)]} skin.
-(link-repeat:&quot;White&quot;)[(set:$playerCharacter&#x27;s skin to &quot;white&quot;)] | (link-repeat:&quot;Pale&quot;)[(set:$playerCharacter&#x27;s skin to &quot;pale&quot;)] | (link-repeat:&quot;Fair&quot;)[(set:$playerCharacter&#x27;s skin to &quot;fair&quot;)] | (link-repeat:&quot;Tan&quot;)[(set:$playerCharacter&#x27;s skin to &quot;tan&quot;)] | (link-repeat:&quot;Olive&quot;)[(set:$playerCharacter&#x27;s skin to &quot;olive&quot;)] | (link-repeat:&quot;Dark&quot;)[(set:$playerCharacter&#x27;s skin to &quot;dark&quot;)] | (link-repeat:&quot;Black&quot;)[(set:$playerCharacter&#x27;s skin to &quot;black&quot;)]
-You have {(live:200)[(print:$playerCharacter&#x27;s eyes)]} eyes.
-(link-repeat:&quot;Blue&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;blue&quot;)] | (link-repeat:&quot;Purple&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;purple&quot;)] | (link-repeat:&quot;Gray&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;gray&quot;)] | (link-repeat:&quot;Green&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;green&quot;)] | (link-repeat:&quot;Hazel&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;hazel&quot;)] | (link-repeat:&quot;Amber&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;amber&quot;)] | (link-repeat:&quot;Brown&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;brown&quot;)] | (link-repeat:&quot;Black&quot;)[(set:$playerCharacter&#x27;s eyes to &quot;black&quot;)]
-You have {(live:200)[(print:$playerCharacter&#x27;s hairLength) (print:$playerCharacter&#x27;s hairType) (print:$playerCharacter&#x27;s hairColor)]} hair.
-(link-repeat:&quot;Shaved&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;shaved&quot;)] | (link-repeat:&quot;Ear length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;ear length&quot;)] | (link-repeat:&quot;Shoulder length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;shoulder length&quot;)] | (link-repeat:&quot;Navel length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;navel length&quot;)] | (link-repeat:&quot;Waist length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;waist length&quot;)] | (link-repeat:&quot;Hip length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;hip length&quot;)] | (link-repeat:&quot;Knee length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;knee length&quot;)] | (link-repeat:&quot;Ankle length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;ankle length&quot;)] | (link-repeat:&quot;Floor length&quot;)[(set:$playerCharacter&#x27;s hairLength to &quot;floor length&quot;)]
-(link-repeat:&quot;Straight&quot;)[(set:$playerCharacter&#x27;s hairType to &quot;straight&quot;)] | (link-repeat:&quot;Wavy&quot;)[(set:$playerCharacter&#x27;s hairType to &quot;wavy&quot;)] | (link-repeat:&quot;Curly&quot;)[(set:$playerCharacter&#x27;s hairType to &quot;curly&quot;)]
-(link-repeat:&quot;Blonde&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;blonde&quot;)] | (link-repeat:&quot;Strawberry Blonde&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;strawberry blonde&quot;)] | (link-repeat:&quot;Red&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;red&quot;)] | (link-repeat:&quot;Copper&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;copper&quot;)] | (link-repeat:&quot;Chestnut&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;chestnut&quot;)] | (link-repeat:&quot;Brown&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;brown&quot;)] | (link-repeat:&quot;Black&quot;)[(set:$playerCharacter&#x27;s hairColor to &quot;black&quot;)]
-You are of {(live:200)[(print:$playerCharacter&#x27;s height)]} stature.
-(link-repeat:&quot;Petite&quot;)[(set:$playerCharacter&#x27;s height to &quot;petite&quot;)] | (link-repeat:&quot;Short&quot;)[(set:$playerCharacter&#x27;s height to &quot;short&quot;)] | (link-repeat:&quot;Average&quot;)[(set:$playerCharacter&#x27;s height to &quot;average&quot;)] | (link-repeat:&quot;Tall&quot;)[(set:$playerCharacter&#x27;s height to &quot;tall&quot;)] | (link-repeat:&quot;Towering&quot;)[(set:$playerCharacter&#x27;s height to &quot;towering&quot;)]
-Your chest has {(live:200)[(print:$playerCharacter&#x27;s breasts)]} breasts.
-(link-repeat:&quot;No&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;no&quot;)] | (link-repeat:&quot;Itty bitty&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;itty bitty&quot;)] | (link-repeat:&quot;Small&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;small&quot;)] | (link-repeat:&quot;Moderate&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;moderate&quot;)] | (link-repeat:&quot;Big&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;big&quot;)] | (link-repeat:&quot;Huge&quot;)[(set:$playerCharacter&#x27;s breasts to &quot;huge&quot;)]
-Your butt is {(live:200)[(print:$playerCharacter&#x27;s butt)]}.
-(link-repeat:&quot;Flat&quot;)[(set:$playerCharacter&#x27;s butt to &quot;flat&quot;)] | (link-repeat:&quot;Small&quot;)[(set:$playerCharacter&#x27;s butt to &quot;small&quot;)] | (link-repeat:&quot;Plump&quot;)[(set:$playerCharacter&#x27;s butt to &quot;plump&quot;)] | (link-repeat:&quot;Round, and Big&quot;)[(set:$playerCharacter&#x27;s butt to &quot;round, and big&quot;)] | (link-repeat:&quot;Huge&quot;)[(set:$playerCharacter&#x27;s butt to &quot;huge&quot;)]
-Your pubes are kept {(live:200)[(print:$playerCharacter&#x27;s pubes)]}.
-(link-repeat:&quot;Shaved&quot;)[(set:$playerCharacter&#x27;s pubes to &quot;shaved&quot;)] | (link-repeat:&quot;Trimmed&quot;)[(set:$playerCharacter&#x27;s pubes to &quot;trimmed&quot;)] | (link-repeat:&quot;Natural&quot;)[(set:$playerCharacter&#x27;s pubes to &quot;natural&quot;)]
-[[Review yourself-&gt;start-config3]]</tw-passagedata><tw-passagedata pid="8" name="start-config3" tags="config" position="629,2">You are called (print:$playerCharacter&#x27;s name), with a (if:$playerCharacter&#x27;s background is 0)[(print:&quot;magical&quot;)](else-if:$playerCharacter&#x27;s background is 1)[(print:&quot;physical&quot;)](else-if:$playerCharacter&#x27;s background is 2)[(print:&quot;sexual&quot;)] background. You are a (if:$playerCharacter&#x27;s race is 0)[(print:&quot;Human&quot;)] with (if:$playerCharacter&#x27;s sex is 0)[(print:&quot;a penis&quot;)](else-if:$playerCharacter&#x27;s sex is 1)[(print:&quot;a vagina&quot;)](else-if:$playerCharacter&#x27;s sex is 2)[(print:&quot;both a penis and a vagina&quot;)] and you keep your pubes in a (print:$playerCharacter&#x27;s pubes) state. You have (print:$playerCharacter&#x27;s skin) skin, (print:$playerCharacter&#x27;s eyes) eyes, and (print:$playerCharacter&#x27;s hairLength) (print:$playerCharacter&#x27;s hairType) (print:$playerCharacter&#x27;s hairColor) hair. You are of (print:$playerCharacter&#x27;s height) stature, with (print:$playerCharacter&#x27;s breasts) breasts, and a (print:$playerCharacter&#x27;s butt) butt with (print:$playerCharacter&#x27;s tail) tail.
-[[This isn&#x27;t me!-&gt;start-config0]]
-[[Yep, this is right!-&gt;start-config4]]</tw-passagedata><tw-passagedata pid="9" name="start-config4" tags="config" position="744,2">Attractions</tw-passagedata></tw-storydata>
+[[A human|start-config-human][$playerCharacter.Race to 0]]</tw-passagedata><tw-passagedata pid="7" name="start-config-human" tags="config" position="507,2">Looking in more detail how do you appear?
+You have &lt;span class=&quot;pcSkin&quot;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;/span&gt; skin.
+&lt;&lt;link &quot;White&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 0&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Pale&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 1&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Fair&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 2&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Tan&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 3&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Olive&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 4&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Dark&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 5&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Black&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Skin = 6&gt;&gt;&lt;&lt;replace &quot;.pcSkin&quot;&gt;&gt;&lt;&lt;pcSkin&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You have &lt;span class=&quot;pcEyes&quot;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;/span&gt; eyes.
+&lt;&lt;link &quot;Blue&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 0&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Purple&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 1&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Gray&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 2&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Green&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 3&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Hazel&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 4&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Amber&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 5&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Brown&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 6&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Black&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Eyes = 7&gt;&gt;&lt;&lt;replace &quot;.pcEyes&quot;&gt;&gt;&lt;&lt;pcEyes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You have &lt;span class=&quot;pcHairLength&quot;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;/span&gt; &lt;span class=&quot;pcHairType&quot;&gt;&lt;&lt;pcHairType&gt;&gt;&lt;/span&gt; &lt;span class=&quot;pcHairColor&quot;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;/span&gt; hair.
+&lt;&lt;link &quot;Shaved&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 0&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Ear-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 1&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Shoulder-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 2&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Navel-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 3&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Waist-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 4&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Hip-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 5&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Knee-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 6&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Ankle-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 7&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Floor-Length&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairLength = 8&gt;&gt;&lt;&lt;replace &quot;.pcHairLength&quot;&gt;&gt;&lt;&lt;pcHairLength&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;link &quot;Straight&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairType = 0&gt;&gt;&lt;&lt;replace &quot;.pcHairType&quot;&gt;&gt;&lt;&lt;pcHairType&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Wavy&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairType = 1&gt;&gt;&lt;&lt;replace &quot;.pcHairType&quot;&gt;&gt;&lt;&lt;pcHairType&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Curly&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairType = 2&gt;&gt;&lt;&lt;replace &quot;.pcHairType&quot;&gt;&gt;&lt;&lt;pcHairType&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+&lt;&lt;link &quot;Blonde&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 0&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Strawberry Blonde&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 1&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Red&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 2&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Copper&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 3&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Chestnut&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 4&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Brown&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 5&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Black&quot;&gt;&gt;&lt;&lt;set $playerCharacter.HairColor = 6&gt;&gt;&lt;&lt;replace &quot;.pcHairColor&quot;&gt;&gt;&lt;&lt;pcHairColor&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You are of &lt;span class=&quot;pcHeight&quot;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;/span&gt; stature.
+&lt;&lt;link &quot;Petite&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Height = 0&gt;&gt;&lt;&lt;replace &quot;.pcHeight&quot;&gt;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Short&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Height = 1&gt;&gt;&lt;&lt;replace &quot;.pcHeight&quot;&gt;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Average&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Height = 2&gt;&gt;&lt;&lt;replace &quot;.pcHeight&quot;&gt;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Tall&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Height = 3&gt;&gt;&lt;&lt;replace &quot;.pcHeight&quot;&gt;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Towering&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Height = 4&gt;&gt;&lt;&lt;replace &quot;.pcHeight&quot;&gt;&gt;&lt;&lt;pcHeight&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+Your chest has &lt;span class=&quot;pcBreasts&quot;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;/span&gt; breasts.
+&lt;&lt;link &quot;No&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 0&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Tiny&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 1&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Small&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 2&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Moderate&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 3&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Big&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 4&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Huge&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Breasts = 5&gt;&gt;&lt;&lt;replace &quot;.pcBreasts&quot;&gt;&gt;&lt;&lt;pcBreasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+Your butt is &lt;span class=&quot;pcButt&quot;&gt;&lt;&lt;pcButt&gt;&gt;&lt;/span&gt;.
+&lt;&lt;link &quot;Flat&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 0&gt;&gt;&lt;&lt;replace &quot;.pcButt&quot;&gt;&gt;&lt;&lt;pcButt&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Small&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 1&gt;&gt;&lt;&lt;replace &quot;.pcButt&quot;&gt;&gt;&lt;&lt;pcButt&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Plump&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 2&gt;&gt;&lt;&lt;replace &quot;.pcButt&quot;&gt;&gt;&lt;&lt;pcButt&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Big&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 3&gt;&gt;&lt;&lt;replace &quot;.pcButt&quot;&gt;&gt;&lt;&lt;pcButt&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Huge&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Butt = 4&gt;&gt;&lt;&lt;replace &quot;.pcButt&quot;&gt;&gt;&lt;&lt;pcButt&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+Your pubes are kept &lt;span class=&quot;pcPubes&quot;&gt;&lt;&lt;pcPubes&gt;&gt;&lt;/span&gt;.
+&lt;&lt;link &quot;Shaved&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Pubes = 0&gt;&gt;&lt;&lt;replace &quot;.pcPubes&quot;&gt;&gt;&lt;&lt;pcPubes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Trimmed&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Pubes = 1&gt;&gt;&lt;&lt;replace &quot;.pcPubes&quot;&gt;&gt;&lt;&lt;pcPubes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Natural&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Pubes = 2&gt;&gt;&lt;&lt;replace &quot;.pcPubes&quot;&gt;&gt;&lt;&lt;pcPubes&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+[[Review yourself|start-config3]]</tw-passagedata><tw-passagedata pid="8" name="start-config3" tags="config" position="629,2">You are called &lt;&lt;print $playerCharacter.Name&gt;&gt;, with a &lt;&lt;if $playerCharacter.Background == 0&gt;&gt;magical&lt;&lt;elseif $playerCharacter.Background == 1&gt;&gt;physical&lt;&lt;elseif $playerCharacter.Background == 2&gt;&gt;sexual&lt;&lt;/if&gt;&gt; background. You are a &lt;&lt;pcRace&gt;&gt; with &lt;&lt;pcSex&gt;&gt; and you keep your pubes in a &lt;&lt;pcPubes&gt;&gt; state. You have &lt;&lt;pcSkin&gt;&gt; skin, &lt;&lt;pcEyes&gt;&gt; eyes, and &lt;&lt;pcHairLength&gt;&gt; &lt;&lt;pcHairType&gt;&gt; &lt;&lt;pcHairColor&gt;&gt; hair. You are of &lt;&lt;pcHeight&gt;&gt; stature, with &lt;&lt;pcBreasts&gt;&gt; breasts, and a &lt;&lt;pcButt&gt;&gt; butt with &lt;&lt;pcTail&gt;&gt; tail.
+[[This isn&#x27;t me!|start-config0]]
+[[Yep, this is right!|start-config4]]</tw-passagedata><tw-passagedata pid="9" name="start-config4" tags="config" position="744,2">&lt;&lt;set $playerCharacter.Orientation = 0&gt;&gt;&lt;&lt;set $playerCharacter.Furry = 0&gt;&gt;&lt;&lt;set $playerCharacter.Chronophilia = 0&gt;&gt;&lt;&lt;set $playerCharacter.Beasts = 0&gt;&gt;As you think about what you look like, you also think about who you are, and what you like.
+You like those with &lt;span class=&quot;pcOrientation&quot;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;/span&gt;.
+&lt;&lt;link &quot;Penis&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Orientation = 0&gt;&gt;&lt;&lt;replace &quot;.pcOrientation&quot;&gt;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Vagina&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Orientation = 1&gt;&gt;&lt;&lt;replace &quot;.pcOrientation&quot;&gt;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Penis or Vagina&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Orientation = 2&gt;&gt;&lt;&lt;replace &quot;.pcOrientation&quot;&gt;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Both&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Orientation = 3&gt;&gt;&lt;&lt;replace &quot;.pcOrientation&quot;&gt;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Anything&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Orientation = 4&gt;&gt;&lt;&lt;replace &quot;.pcOrientation&quot;&gt;&gt;&lt;&lt;pcOrientation&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You are attracted to &lt;span class=&quot;pcFurry&quot;&gt;&lt;&lt;pcFurry&gt;&gt;&lt;/span&gt;.
+&lt;&lt;link &quot;No Furkin&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Furry = 0&gt;&gt;&lt;&lt;replace &quot;.pcFurry&quot;&gt;&gt;&lt;&lt;pcFurry&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Half Furkin&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Furry = 1&gt;&gt;&lt;&lt;replace &quot;.pcFurry&quot;&gt;&gt;&lt;&lt;pcFurry&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Full Furkin&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Furry = 2&gt;&gt;&lt;&lt;replace &quot;.pcFurry&quot;&gt;&gt;&lt;&lt;pcFurry&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You prefer your partners to be of &lt;span class=&quot;pcChronophilia&quot;&gt;&lt;&lt;pcChronophilia&gt;&gt;&lt;/span&gt; age and older.
+&lt;&lt;link &quot;Adults Only&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Chronophilia = 0&gt;&gt;&lt;&lt;replace &quot;.pcChronophilia&quot;&gt;&gt;&lt;&lt;pcChronophilia&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Fully Developed Teens (16+)&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Chronophilia = 1&gt;&gt;&lt;&lt;replace &quot;.pcChronophilia&quot;&gt;&gt;&lt;&lt;pcChronophilia&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Developing Teens (13+)&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Chronophilia = 2&gt;&gt;&lt;&lt;replace &quot;.pcChronophilia&quot;&gt;&gt;&lt;&lt;pcChronophilia&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Just Pubescent (10+)&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Chronophilia = 3&gt;&gt;&lt;&lt;replace &quot;.pcChronophilia&quot;&gt;&gt;&lt;&lt;pcChronophilia&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
+You like to use &lt;span class=&quot;pcBeasts&quot;&gt;&lt;&lt;pcBeasts&gt;&gt;&lt;/span&gt; beasts with your partners.
+&lt;&lt;link &quot;No&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Beasts = 0&gt;&gt;&lt;&lt;replace &quot;.pcBeasts&quot;&gt;&gt;&lt;&lt;pcBeasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Wild Beasts (including dogs)&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Beasts = 1&gt;&gt;&lt;&lt;replace &quot;.pcBeasts&quot;&gt;&gt;&lt;&lt;pcBeasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Monstrous Beasts (including tentacles)&quot;&gt;&gt;&lt;&lt;set $playerCharacter.Beasts = 2&gt;&gt;&lt;&lt;replace &quot;.pcBeasts&quot;&gt;&gt;&lt;&lt;pcBeasts&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="playerCharacter" tags="widget config nobr" position="700,326">&lt;&lt;widget &quot;pcConfigLink&quot;&gt;&gt;&lt;&lt;link $args[0]&gt;&gt;&lt;&lt;set _widget = &quot;pc&quot;+$args[1]&gt;&gt;&lt;&lt;set _class = &quot;.&quot;+_widget&gt;&gt;&lt;&lt;set $playerCharacter[$args[1]] = $args[2]&gt;&gt;&lt;&lt;replace _class&gt;&gt;&lt;&lt;_widget&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcSex&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Sex&gt;&gt;
+&lt;&lt;case 0&gt;&gt;a penis
+&lt;&lt;case 1&gt;&gt;a vagina
+&lt;&lt;case 2&gt;&gt;both a penis and a vagina
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcRace&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Race&gt;&gt;
+&lt;&lt;case 0&gt;&gt;Human
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcSkin&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Skin&gt;&gt;
+&lt;&lt;case 0&gt;&gt;white
+&lt;&lt;case 1&gt;&gt;pale
+&lt;&lt;case 2&gt;&gt;fair
+&lt;&lt;case 3&gt;&gt;tan
+&lt;&lt;case 4&gt;&gt;olive
+&lt;&lt;case 5&gt;&gt;dark
+&lt;&lt;case 6&gt;&gt;black
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcEyes&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Eyes&gt;&gt;
+&lt;&lt;case 0&gt;&gt;blue
+&lt;&lt;case 1&gt;&gt;purple
+&lt;&lt;case 2&gt;&gt;gray
+&lt;&lt;case 3&gt;&gt;green
+&lt;&lt;case 4&gt;&gt;hazel
+&lt;&lt;case 5&gt;&gt;amber
+&lt;&lt;case 6&gt;&gt;brown
+&lt;&lt;case 7&gt;&gt;black
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcHairLength&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.HairLength&gt;&gt;
+&lt;&lt;case 0&gt;&gt;shaved
+&lt;&lt;case 1&gt;&gt;ear-length
+&lt;&lt;case 2&gt;&gt;shoulder-length
+&lt;&lt;case 3&gt;&gt;navel-length
+&lt;&lt;case 4&gt;&gt;waist-length
+&lt;&lt;case 5&gt;&gt;hip-length
+&lt;&lt;case 6&gt;&gt;knee-length
+&lt;&lt;case 7&gt;&gt;ankle-length
+&lt;&lt;case 8&gt;&gt;floor-length
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcHairType&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.HairType&gt;&gt;
+&lt;&lt;case 0&gt;&gt;straight
+&lt;&lt;case 1&gt;&gt;wavy
+&lt;&lt;case 2&gt;&gt;curly
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcHairColor&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.HairColor&gt;&gt;
+&lt;&lt;case 0&gt;&gt;blonde
+&lt;&lt;case 1&gt;&gt;strawberry blonde
+&lt;&lt;case 2&gt;&gt;red
+&lt;&lt;case 3&gt;&gt;copper
+&lt;&lt;case 4&gt;&gt;chestnut
+&lt;&lt;case 5&gt;&gt;&lt;&lt;set _randDesc = random(1)&gt;&gt;&lt;&lt;if _randDesc == 0&gt;&gt;brown&lt;&lt;elseif _randDesc == 1&gt;&gt;brunette&lt;&lt;/if&gt;&gt;
+&lt;&lt;case 6&gt;&gt;black
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcHeight&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Height&gt;&gt;
+&lt;&lt;case 0&gt;&gt;petite
+&lt;&lt;case 1&gt;&gt;short
+&lt;&lt;case 2&gt;&gt;average
+&lt;&lt;case 3&gt;&gt;tall
+&lt;&lt;case 4&gt;&gt;towering
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcBreasts&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Breasts&gt;&gt;
+&lt;&lt;case 0&gt;&gt;no
+&lt;&lt;case 1&gt;&gt;tiny
+&lt;&lt;case 2&gt;&gt;small
+&lt;&lt;case 3&gt;&gt;moderate
+&lt;&lt;case 4&gt;&gt;big
+&lt;&lt;case 5&gt;&gt;huge
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcButt&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Butt&gt;&gt;
+&lt;&lt;case 0&gt;&gt;flat
+&lt;&lt;case 1&gt;&gt;small
+&lt;&lt;case 2&gt;&gt;plump
+&lt;&lt;case 3&gt;&gt;big
+&lt;&lt;case 4&gt;&gt;huge
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcPubes&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Pubes&gt;&gt;
+&lt;&lt;case 0&gt;&gt;shaved
+&lt;&lt;case 1&gt;&gt;trimmed
+&lt;&lt;case 2&gt;&gt;natural
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcTail&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Tail&gt;&gt;
+&lt;&lt;case 0&gt;&gt;no
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcOrientation&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Orientation&gt;&gt;
+&lt;&lt;case 0&gt;&gt;a penis
+&lt;&lt;case 1&gt;&gt;a vagina
+&lt;&lt;case 2&gt;&gt;a penis or a vagina
+&lt;&lt;case 3&gt;&gt;both a penis and a vagina
+&lt;&lt;case 4&gt;&gt;anything
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcFurry&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Furry&gt;&gt;
+&lt;&lt;case 0&gt;&gt;no furkin
+&lt;&lt;case 1&gt;&gt;half furkin
+&lt;&lt;case 2&gt;&gt;full furkin
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcChronophilia&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Chronophilia&gt;&gt;
+&lt;&lt;case 0&gt;&gt;adult
+&lt;&lt;case 1&gt;&gt;older teen
+&lt;&lt;case 2&gt;&gt;younger teen
+&lt;&lt;case 3&gt;&gt;childlike
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;pcBeasts&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Beasts&gt;&gt;
+&lt;&lt;case 0&gt;&gt;no
+&lt;&lt;case 1&gt;&gt;wild
+&lt;&lt;case 2&gt;&gt;monstrous
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata></tw-storydata>
