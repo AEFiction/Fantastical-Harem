@@ -1,8 +1,10 @@
 <tw-storydata name="Fantastical-Harem" startnode="1" creator="Twine" creator-version="2.1.3" ifid="F182644B-68C8-49C8-860F-C45B871E3FEF" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">config.history.controls = false;
-config.saves.autosave = ["autosave"];</script><tw-passagedata pid="1" name="Main Screen" tags="blahblahblah" position="125,125">This game contains many themes that may be considered offensive. Further, due to the sexual nature of the game you must be of legal age to play this type of game.
+config.saves.autosave = ["autosave"];
+</script><tw-passagedata pid="1" name="Main Screen" tags="blahblahblah" position="125,125">This game contains many themes that may be considered offensive. Further, due to the sexual nature of the game you must be of legal age to play this type of game.
 [[Agree, and play the game|start-config0]]
 It is created using &lt;a href=&quot;https://twinery.org/&quot;&gt;Twine&lt;/a&gt; and released under the [[GPL V3|license]].
 The content is copyrighted per the [[credits|Contributors]]</tw-passagedata><tw-passagedata pid="2" name="license" tags="blahblahblah" position="0,0">                    GNU GENERAL PUBLIC LICENSE
@@ -730,7 +732,7 @@ You prefer your partners to be of &lt;span class=&quot;pcChronophilia&quot;&gt;&
 &lt;&lt;pcConfigLink &quot;Chronophilia&quot; &quot;Adults Only&quot; 0&gt;&gt; | &lt;&lt;pcConfigLink &quot;Chronophilia&quot; &quot;Fully Developed Teens (16+)&quot; 1&gt;&gt; | &lt;&lt;pcConfigLink &quot;Chronophilia&quot; &quot;Developing Teens (13+)&quot; 2&gt;&gt; | &lt;&lt;pcConfigLink &quot;Chronophilia&quot; &quot;Just Pubescent (10+)&quot; 3&gt;&gt;
 You like to use &lt;span class=&quot;pcBeasts&quot;&gt;&lt;&lt;pcBeasts&gt;&gt;&lt;/span&gt; beasts with your partners.
 &lt;&lt;pcConfigLink &quot;Beasts&quot; &quot;No&quot; 0&gt;&gt; | &lt;&lt;pcConfigLink &quot;Beasts&quot; &quot;Wild Beasts (including dogs)&quot; 1&gt;&gt; | &lt;&lt;pcConfigLink &quot;Beasts&quot; &quot;Monstrous Beasts (including tentacles)&quot; 2&gt;&gt;
-[[Head out|intro-tale0]]</tw-passagedata><tw-passagedata pid="10" name="playerCharacter" tags="widget config nobr" position="0,250">&lt;&lt;widget &quot;pcConfigLink&quot;&gt;&gt;&lt;&lt;link $args[1]&gt;&gt;&lt;&lt;set _widget = &quot;pc&quot;+$args[0]&gt;&gt;&lt;&lt;set $playerCharacter[$args[0]] = $args[2]&gt;&gt;&lt;&lt;replace &#x60;&quot;.&quot;+_widget&#x60;&gt;&gt;&lt;&lt;print&quot;&lt;&lt;&quot;+_widget+&quot;&gt;&gt;&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/widget&gt;&gt;
+&lt;&lt;if $playerCharacter.Background == 0&gt;&gt;[[Go to graduation|intro-tale0]]&lt;&lt;elseif $playerCharacter.Background == 1&gt;&gt;[[Go to retirement|intro-tale0]]&lt;&lt;elseif $playerCharacter.Background == 2&gt;&gt;[[Go to a bar|intro-tale0]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="playerCharacter" tags="widget config nobr" position="0,250">&lt;&lt;widget &quot;pcConfigLink&quot;&gt;&gt;&lt;&lt;link $args[1]&gt;&gt;&lt;&lt;set _widget = &quot;pc&quot;+$args[0]&gt;&gt;&lt;&lt;set $playerCharacter[$args[0]] = $args[2]&gt;&gt;&lt;&lt;replace &#x60;&quot;.&quot;+_widget&#x60;&gt;&gt;&lt;&lt;print&quot;&lt;&lt;&quot;+_widget+&quot;&gt;&gt;&quot;&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;pcSex&quot;&gt;&gt;&lt;&lt;switch $playerCharacter.Sex&gt;&gt;
 &lt;&lt;case 0&gt;&gt;a penis
@@ -787,7 +789,7 @@ You like to use &lt;span class=&quot;pcBeasts&quot;&gt;&lt;&lt;pcBeasts&gt;&gt;&
 &lt;&lt;case 2&gt;&gt;red
 &lt;&lt;case 3&gt;&gt;copper
 &lt;&lt;case 4&gt;&gt;chestnut
-&lt;&lt;case 5&gt;&gt;&lt;&lt;set _randDesc = random(1)&gt;&gt;&lt;&lt;if _randDesc == 0&gt;&gt;brown&lt;&lt;elseif _randDesc == 1&gt;&gt;brunette&lt;&lt;/if&gt;&gt;
+&lt;&lt;case 5&gt;&gt;either(&quot;brown&quot;, &quot;brunette&quot;)
 &lt;&lt;case 6&gt;&gt;black
 &lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
 
@@ -851,4 +853,5 @@ You like to use &lt;span class=&quot;pcBeasts&quot;&gt;&lt;&lt;pcBeasts&gt;&gt;&
 &lt;&lt;case 0&gt;&gt;no
 &lt;&lt;case 1&gt;&gt;wild
 &lt;&lt;case 2&gt;&gt;monstrous
-&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="intro-tale0" tags="autosave" position="250,125">&lt;&lt;if $playerCharacter.background == 0&gt;&gt;</tw-passagedata></tw-storydata>
+&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="intro-tale0" tags="autosave" position="250,125">&lt;&lt;if $playerCharacter.Background == 0&gt;&gt;Finally. You have been training for this since you were ten. You are now thirty years old, and are graduating, a fully licensed wizard. You line up with the few other students who made it this far. After the normal speeches you proceed up the aisle and accept your diploma. As you do so you feel that someone is paying attention to you, but you don&#x27;t see anyone doing so. After the rest of the ceremony you go to leave the forum, wondering what you will do with the rest of your life when a well-dressed man approaches you. &quot;&lt;&lt;print $playerCharacter.Name&gt;&gt;?&quot; You nod, figuring this is who was watching you earlier. &quot;Congratulations on graduating, and sorry on the loss of your either(&quot;cousin&quot;, &quot;uncle&quot;, &quot;aunt&quot;)&quot;, he says as he hands you a scroll. You unroll it, never having heard of your relative until now. It is a writ listing you as the next of kin, inheriting their property. It doesn&#x27;t seem to be very far from here.&lt;&lt;elseif $playerCharacter.Background == 1&gt;&gt;Retirement. You have served on the guard since you were fifteen, giving up the younger years of your life to earn a pension. You&#x27;re now thirty years old. This year&#x27;s ceremony is the same as every other one. All those who have served out their time seated in front of everyone who could book a day off, eating, drinking, and congratulating each other. You&#x27;re given a medal to certify that you have done your duty, and your first pension payment as a bonus. 10 gold a month. During the ceremony you feel like someone is watching you. As you go to leave the hall you turn around and surprise the well-dressed man who was following you. &quot;&lt;&lt;print $playerCharacter.Name&gt;&gt;, congratulations on retirement, and sorry on the loss of your either(&quot;cousin&quot;, &quot;uncle&quot;, &quot;aunt&quot;)&quot;, he says as he hands you a scroll. You unroll it, remembering your relative having come up distantly in an interal review a few years ago. The scroll is a writ naming you as the next of kin, inheriting their property. Even better, it doesn&#x27;t seem too far from here.&lt;&lt;elseif $playerCharacter.Background == 2&gt;&gt;&lt;&lt;/if&gt;&gt;
+[[Check out your new property|intro-tale1]]</tw-passagedata><tw-passagedata pid="12" name="intro-tale1" tags="" position="250,275">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
